@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { Cocktail } from '../interfaces/cocktail.interface';
 
 @Component({
-  selector: 'app-cocktail-list',
-  templateUrl: './cocktail-list.component.html',
-  styleUrls: ['./cocktail-list.component.scss'],
+  selector: 'app-cocktail-container',
+  templateUrl: './cocktail-container.component.html',
+  styleUrls: ['./cocktail-container.component.scss'],
 })
-export class CocktailListComponent implements OnInit {
-  cocktails: Cocktail[] = [
+export class CocktailContainerComponent implements OnInit {
+  public cocktails: Cocktail[] = [
     {
       name: 'Mojito',
       img:
@@ -31,7 +31,15 @@ export class CocktailListComponent implements OnInit {
     },
   ];
 
+  public selectedCocktail: Cocktail;
+
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.selectedCocktail = this.cocktails[0];
+  }
+
+  public selectCocktail(index: number): void {
+    this.selectedCocktail = this.cocktails[index];
+  }
 }
