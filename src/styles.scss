@@ -93,6 +93,11 @@ body {
 .m-10 {
   margin: 10px;
 }
+
+.mx-10 {
+  margin-right: 10px;
+  margin-left: 10px;
+}
 .m-20 {
   margin: 20px;
 }
@@ -101,17 +106,12 @@ body {
 }
 
 // theme
+
 .list-primary {
   li {
     padding: 10px 15px;
     border: 1px solid var(--lightgray);
     border-top: 0;
-    &:hover {
-      background-color: var(--primary);
-      color: #fafafa;
-      cursor: pointer;
-    }
-    transition: all 0.4s;
   }
   li:first-child {
     border-top: 1px solid var(--lightgray);
@@ -121,6 +121,17 @@ body {
   li:last-child {
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
+  }
+}
+
+.list-primary-action {
+  li {
+    &:hover {
+      background-color: var(--primary);
+      color: #fafafa;
+      cursor: pointer;
+    }
+    transition: background-color 0.4s;
   }
 }
 
@@ -139,6 +150,20 @@ body {
     }
     transition: all 0.4s;
   }
+}
+
+.badge {
+  background-color: var(--secondary);
+  border-radius: 3px;
+  padding: 2px 5px;
+  color: #fafafa;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.active {
+  background-color: var(--secondary);
+  color: #fafafa;
 }
 
 // debug

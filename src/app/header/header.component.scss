@@ -11,6 +11,7 @@ ul {
     padding: 10px 20px;
     display: inline-block;
     border-radius: 3px;
+    cursor: pointer;
     &:hover {
       background-color: var(--secondary);
     }
